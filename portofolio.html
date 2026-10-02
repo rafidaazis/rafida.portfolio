@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rafida Azis Al Habib — Portofolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a2a7a;--blue:#1d4ed8;--sky:#e8f0ff;--gold:#fbbf24;--ink:#0f1b3d;--mut:#5b6784;--bg:#fff;--card:#fff;--line:#e3e9f7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,#0b3ba8 0%,#1d6fe0 55%,#38b6ff 100%);color:#fff;padding-bottom:110px;border-radius:0 0 40px 40px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;position:relative;z-index:2;gap:16px}
+.logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:10px}
+.logo i{width:36px;height:36px;border-radius:10px;background:#fff;color:var(--blue);display:grid;place-items:center;font-style:normal;font-weight:800}
+.links{display:flex;gap:28px;font-size:.9rem;font-weight:500}
+.links a{padding:6px 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{border-color:var(--gold)}
+.pill{background:#fff;color:var(--navy);padding:9px 20px;border-radius:99px;font-weight:600;font-size:.88rem}
+.grid-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding-top:44px;position:relative;z-index:2}
+h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.1;margin:0 0 16px;font-weight:700}
+h1 em{font-family:"Playfair Display",Georgia,serif;color:var(--gold);font-weight:600}
+.hero p{max-width:46ch;opacity:.92;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:14px;font-weight:600;font-size:.95rem;border:0;cursor:pointer;font-family:inherit}
+.btn.gold{background:var(--gold);color:#3a2a00}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.blue{background:var(--blue);color:#fff}
+.proof{margin-top:26px;font-size:.88rem;display:flex;align-items:center;gap:10px}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* Kartu Profil 3D Gyroscope */
+.profile-card-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-card {
+  width: 100%;
+  background: #ffffff;
+  color: var(--ink);
+  border-radius: 28px;
+  padding: 32px 24px 26px;
+  box-shadow: 0 24px 60px rgba(5,25,90,.35);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.profile-card .tag {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(40px);
+  background: var(--gold);
+  color: #3a2a00;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 6px 18px;
+  border-radius: 99px;
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.4);
+  white-space: nowrap;
+}
+.avatar-box {
+  width: 135px;
+  height: 135px;
+  margin: 10px auto 16px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, var(--blue), var(--gold));
+  box-shadow: 0 12px 28px rgba(29, 78, 216, 0.25);
+  position: relative;
+  transform: translateZ(35px);
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: var(--sky);
+}
+.profile-info {
+  transform: translateZ(25px);
+}
+.profile-info h3 {
+  margin: 6px 0 2px;
+  font-size: 1.4rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+.profile-info p {
+  color: var(--mut);
+  font-size: 0.82rem;
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: var(--sky);
+  padding: 12px 10px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  transform: translateZ(30px);
+}
+.profile-stats div b {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--navy);
+}
+.profile-stats div small {
+  font-size: 0.7rem;
+  color: var(--mut);
+  font-weight: 500;
+}
+.profile-card .btn {
+  width: 100%;
+  justify-content: center;
+  transform: translateZ(40px);
+}
+
+.bar{background:#fff;border-radius:20px;box-shadow:0 14px 40px rgba(15,40,120,.14);margin:-52px auto 0;padding:18px 22px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:18px;align-items:center;position:relative;z-index:3;max-width:1120px;width:calc(100% - 40px)}
+.bar div small{display:block;color:var(--mut);font-size:.78rem}
+.bar div b{font-size:.92rem;font-weight:600}
+section{padding:46px 0 0}
+h2{font-size:1.25rem;margin:0;font-weight:700}
+.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.head a{color:var(--blue);font-size:.85rem;font-weight:600}
+.dest{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.d{aspect-ratio:3/4;border-radius:18px;padding:14px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background-size:cover;background-position:center;transition:transform .15s}
+.d::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(5,15,50,.72))}
+.d>*{position:relative}
+.d b{font-size:.92rem}.d span{font-size:.72rem;opacity:.85}
+
+.g1{background-image:linear-gradient(160deg,rgba(56,189,248,0.75),rgba(3,105,161,0.88)),var(--bg-img,none)}
+.g2{background-image:linear-gradient(160deg,rgba(52,211,153,0.75),rgba(15,118,110,0.88)),var(--bg-img,none)}
+.g3{background-image:linear-gradient(160deg,rgba(251,146,60,0.75),rgba(124,58,237,0.88)),var(--bg-img,none)}
+.g4{background-image:linear-gradient(160deg,rgba(245,158,11,0.75),rgba(190,18,60,0.88)),var(--bg-img,none)}
+.g5{background-image:linear-gradient(160deg,rgba(96,165,250,0.75),rgba(30,58,138,0.88)),var(--bg-img,none)}
+.g6{background-image:linear-gradient(160deg,rgba(34,211,238,0.75),rgba(37,99,235,0.88)),var(--bg-img,none)}
+
+.why{background:var(--navy);color:#fff;border-radius:22px;padding:26px;text-align:center}
+.why small{opacity:.7;font-size:.72rem}
+.why h2{margin:4px 0 22px;font-size:1.35rem}
+.why .row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;text-align:left}
+.why .row div{display:flex;gap:10px;font-size:.78rem}
+.why .row b{display:block;font-size:.86rem}
+.ic{flex:none;width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.cta{background:var(--sky);border-radius:20px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cta h3{margin:0;font-size:1.05rem}.cta p{margin:2px 0 0;color:var(--mut);font-size:.85rem}
+.deals{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(15,40,120,.07)}
+.card .img{height:110px;position:relative;background-size:cover;background-position:center}
+.card .off{position:absolute;top:10px;left:10px;background:#ef4444;color:#fff;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:8px}
+.card .b{padding:14px 16px 16px}
+.card h4{margin:0 0 2px;font-size:.95rem}.card p{margin:0;color:var(--mut);font-size:.78rem}
+.card .f{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:.8rem;color:var(--blue);font-weight:600}
+.banner{height:150px;border-radius:20px;background:linear-gradient(100deg,#0a2a7a,#0e7490 60%,#22d3ee);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 34px;gap:20px}
+.banner h2{font-size:1.9rem;line-height:1.15}.banner h2 em{font-family:"Playfair Display",serif;color:var(--gold)}
+.play{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:1.2rem}
+.rev{display:grid;grid-template-columns:repeat(3,1fr) 1.1fr;gap:16px}
+.q{padding:18px}.q p{margin:0 0 10px;font-size:.84rem}.q small{color:var(--mut)}
+.stat{background:var(--sky);border-radius:18px;padding:18px;display:grid;gap:10px;align-content:center}
+.stat b{font-size:1.15rem;color:var(--navy)}.stat span{font-size:.78rem;color:var(--mut);margin-left:6px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:16px}
+.plan{padding:20px;position:relative;display:block;color:inherit;transition:transform .15s}
+.plan:hover{transform:translateY(-3px)}
+
+/* STYLING KARTU KONTAK & SOSIAL MEDIA TAUTAN LANGSUNG */
+.contact-section-wrapper {
+  display: grid;
+  gap: 20px;
+}
+.contact-cards-list {
+  display: grid;
+  gap: 14px;
+}
+.contact-card-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 24px rgba(15, 40, 120, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  color: var(--ink);
+  text-decoration: none;
+}
+.contact-card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(15, 40, 120, 0.12);
+  border-color: rgba(29, 78, 216, 0.3);
+}
+.contact-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: var(--sky);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.contact-card-info {
+  display: flex;
+  flex-direction: column;
+}
+.contact-card-info small {
+  color: #8b96a8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.contact-card-info b {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+.social-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+.social-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--navy);
+  box-shadow: 0 4px 14px rgba(15, 40, 120, 0.05);
+  transition: all 0.18s ease;
+  text-decoration: none;
+}
+.social-pill-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  color: var(--blue);
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
+}
+
+/* Penyesuaian kontak di footer */
+.footer-social-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 500;
+  transition: all 0.18s ease;
+}
+.footer-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(4px);
+  border-color: var(--gold);
+}
+
+footer{background:var(--navy);color:#fff;border-radius:24px 24px 0 0;margin:46px auto 0;max-width:1120px;width:calc(100% - 40px);padding:30px 30px 14px}
+.fg{display:grid;grid-template-columns:1.3fr 0.9fr 0.9fr 1.5fr;gap:24px;font-size:.84rem}
+footer h5{margin:0 0 12px;font-size:.9rem}footer a,footer li{display:block;opacity:.88;margin-bottom:6px;list-style:none}
+footer ul{padding:0;margin:0}
+.copy{text-align:center;font-size:.74rem;opacity:.6;margin-top:22px;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+@media(max-width:900px){
+.links{display:none}.grid-hero{grid-template-columns:1fr}.bar{grid-template-columns:1fr 1fr}.dest{grid-template-columns:repeat(3,1fr)}
+.why .row{grid-template-columns:1fr 1fr}.deals,.rev,.plans{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.banner h2{font-size:1.4rem}}
+@media(max-width:560px){.dest,.deals,.rev,.plans,.why .row,.bar,.fg{grid-template-columns:1fr}.dest .d{aspect-ratio:16/9}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+a.card{display:block;transition:transform .15s}a.card:hover,.d:hover{transform:translateY(-3px)}.d{transition:transform .15s}
+.menu{display:none;background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:10px;width:40px;height:40px;font-size:1.2rem;cursor:pointer}
+body.sub .grid-hero,body.sub .bar,body.sub .hero::after{display:none}body.sub .hero{padding-bottom:6px}
+.page{padding-top:34px}.back{color:var(--blue);font-weight:600;font-size:.9rem;display:inline-block;margin-bottom:16px}
+.dh{height:200px;border-radius:24px;display:flex;align-items:flex-end;padding:26px;color:#fff}.dh h1{margin:0;font-size:clamp(1.8rem,4vw,2.6rem)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.chip{background:var(--sky);color:var(--navy);padding:6px 14px;border-radius:99px;font-size:.82rem;font-weight:500}
+.cols{display:grid;grid-template-columns:2fr 1fr;gap:24px}.cols h3{margin:22px 0 6px;font-size:1.05rem}.cols h3:first-child{margin-top:4px}.cols p{color:var(--mut);margin:0}
+.box{background:var(--sky);border-radius:18px;padding:20px;align-self:start;display:grid;gap:10px}.box small{color:var(--mut)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn.line{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.lst{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.lst .card .img{height:130px}
+form.f{display:grid;gap:14px;max-width:560px}form.f label{font-size:.85rem;font-weight:600;display:grid;gap:6px}
+form.f input,form.f select,form.f textarea{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;background:#fff;color:var(--ink)}
+.ok{background:#e7f8ee;color:#14532d;border-radius:12px;padding:12px 16px;font-size:.88rem;max-width:560px}
+@media(max-width:900px){.menu{display:block}.links.open{display:flex;position:absolute;top:70px;left:0;right:0;background:var(--navy);border-radius:16px;padding:16px;flex-direction:column;z-index:9}.cols,.lst{grid-template-columns:1fr}}
+.cols ul{color:var(--mut);margin:0;padding-left:20px;display:grid;gap:6px}.plan p{font-size:.84rem}.hero .proof{font-weight:500}
+@media print{.hero,footer,.btn,.back,.pn{display:none!important}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+ <div class="wrap">
+  <nav>
+   <a class="logo" href="#home"><i>R</i>Rafida<span style="font-weight:400;opacity:.8">.portfolio</span></a>
+   <div class="links"><a class="on" href="#home">Beranda</a><a href="#proyek">Proyek</a><a href="#alasan">Keahlian</a><a href="#pengalaman">Pengalaman</a><a href="#prestasi">Prestasi</a><a href="#/kontak">Kontak</a></div>
+   <a class="pill" href="#/kontak">Hubungi Saya</a><button class="menu" aria-label="Menu" aria-expanded="false">☰</button>
+  </nav>
+  <div class="grid-hero">
+   <div>
+    <h1>Rafida Azis<br><em>Al Habib</em></h1>
+    <p>Mahasiswa Teknik Mekatronika PENS &amp; Team Leader Bamantara EEPISAT. Berfokus pada rekayasa dirgantara, sistem mekatronika presisi, dan inovasi energi dari tahap desain hingga uji terbang.</p>
+    <div class="btns"><a class="btn gold" href="#proyek">Lihat Proyek ➜</a><a class="btn ghost" href="#/tentang">▶ Kenali Saya</a></div>
+    <div class="proof"><span class="stars">🏆</span><span>Juara 3 Dunia CanSat 2026 · Best Rocket TEKNOFEST 2026</span></div>
+   </div>
+   
+   <!-- Kartu Profil 3D Gyroscope -->
+   <aside class="profile-card-wrapper" id="profileCardWrapper">
+    <div class="profile-card" id="profileCard">
+     <span class="tag">Teknik Mekatronika</span>
+     <div class="avatar-box">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800" alt="Rafida Azis Al Habib" class="profile-img">
+     </div>
+     <div class="profile-info">
+      <h3>Rafida Azis Al Habib</h3>
+      <p>Team Leader @ Bamantara EEPISAT</p>
+     </div>
+     <div class="profile-stats">
+      <div><b>3.85</b><small>IPK PENS</small></div>
+      <div><b>13+</b><small>Prestasi</small></div>
+      <div><b>5</b><small>Int'l Event</small></div>
+     </div>
+     <a class="btn navy" href="#/kontak">Hubungi Saya ➜</a>
+    </div>
+   </aside>
+  </div>
+ </div>
+</header>
+
+<div class="bar" aria-label="Info singkat">
+ <div><small>Nama</small><b>Rafida Azis Al Habib</b></div>
+ <div><small>Lokasi</small><b>Surabaya, Indonesia</b></div>
+ <div><small>Email</small><b>rafidaazis47@gmail.com</b></div>
+ <div><small>Ketersediaan</small><b>Terbuka untuk kolaborasi</b></div>
+ <a class="btn navy" href="#/cv">Unduh CV</a>
+</div>
+
+<main class="wrap" id="homeMain">
+ <section id="proyek">
+  <div class="head"><h2>Proyek Pilihan</h2><a href="#/proyek">Lihat semua proyek ›</a></div>
+  <div class="dest">
+   <a class="d g1" href="#/proyek/1" style="--bg-img: url('https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=800')"><b>ANBANTARA Medium Altitude High Powered Rocket</b><span>Aerospace · Sep 2026</span></a>
+   <a class="d g2" href="#/proyek/2"><b>123 Block, Round Material Clamp, &amp; Vise Parallel Clamp</b><span>Manufaktur · Jul 2026</span></a>
+   <a class="d g3" href="#/proyek/3"><b>CanSat Paraglider Instrument Delivery</b><span>CanSat · Jun 2026</span></a>
+   <a class="d g4" href="#/proyek/4"><b>Palm Oil Harvesting Tool: Self-Charging Solar Panel</b><span>Energi · Mei 2026</span></a>
+   <a class="d g5" href="#/proyek/5"><b>Palm Oil Harvesting Tool: Self-Charging Piezoelectric</b><span>Energi · Nov 2025</span></a>
+   <a class="d g6" href="#/proyek/6"><b>CanSat Auto-gyro Descender</b><span>CanSat · Jun 2025</span></a>
+  </div>
+ </section>
+
+ <section id="alasan">
+  <div class="why">
+   <small>Keahlian utama</small>
+   <h2>Dari desain hingga uji terbang</h2>
+   <div class="row">
+    <div><span class="ic">★</span><span><b>Kepemimpinan</b>Memimpin tim 22 orang lintas disiplin</span></div>
+    <div><span class="ic">✎</span><span><b>Desain &amp; Simulasi</b>CAD, CFD, dan FEA (ANSYS)</span></div>
+    <div><span class="ic">⚙</span><span><b>Fabrikasi</b>CNC, komposit, 3D printing, laser cutting</span></div>
+    <div><span class="ic">✈</span><span><b>Aerospace</b>Roket, CanSat, dan UAV payload</span></div>
+    <div><span class="ic">✓</span><span><b>Riset</b>Publikasi IEEE &amp; Best Paper IES-ETA 2025</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="cta">
+   <div><h3>Tertarik berkolaborasi?</h3><p>Proyek aerospace, robotika, atau inovasi energi, mari berdiskusi.</p></div>
+   <a class="btn blue" href="#/kontak">Ajak Diskusi ➜</a>
+  </div>
+ </section>
+
+ <section id="pengalaman">
+  <div class="head"><h2>Pengalaman &amp; Pendidikan</h2><a href="#/pengalaman">Lihat semua ›</a></div>
+  <div class="deals">
+   <a class="card" href="#/pengalaman/1"><div class="img g1"><span class="off">2024–Kini</span></div><div class="b"><h4>Team Leader &amp; Mechanical Engineer</h4><p>Bamantara EEPISAT</p><div class="f"><span>Detail</span><span>›</span></div></div></a>
+   <a class="card" href="#/pengalaman/2"><div class="img g3"><span class="off">2025–Kini</span></div><div class="b"><h4>Co-Founder</h4><p>PE-NOVTRA (Palm Energy &amp; Inovasi Nusantara)</p><div class="f"><span>Detail</span><span>›</span></div></div></a>
+   <a class="card" href="#/pengalaman/3"><div class="img g4"><span class="off">Sep 2025</span></div><div class="b"><h4>Student Exchange, Electrical Engineering</h4><p>ITE College West, Singapura</p><div class="f"><span>Detail</span><span>›</span></div></div></a>
+   <a class="card" href="#/pengalaman/4"><div class="img g5"><span class="off">2024–2028</span></div><div class="b"><h4>S.Tr. Teknik Mekatronika</h4><p>Politeknik Elektronika Negeri Surabaya</p><div class="f"><span>Detail</span><span>›</span></div></div></a>
+  </div>
+ </section>
+
+ <section>
+  <a class="banner" href="#/tentang">
+   <h2>Dari meja gambar<br><em>ke langit!</em></h2>
+   <span class="play" aria-hidden="true">▶</span>
+   <div style="font-size:.85rem;line-height:1.8">Desain &amp; simulasi<br>Fabrikasi<br>Uji terbang</div>
+  </a>
+ </section>
+
+ <section id="prestasi">
+  <div class="head"><h2>Prestasi</h2><a href="#/prestasi">Lihat semua ›</a></div>
+  <div class="rev">
+   <a class="card q" href="#/prestasi/1"><p><b>Best Rocket</b>, TEKNOFEST A4 International Rocket Category</p><span class="stars">★★★★★</span><br><small>ROKETSAN, Aksaray, Türkiye · 2026</small></a>
+   <a class="card q" href="#/prestasi/2"><p><b>3rd World Champion</b>, CanSat Competition</p><span class="stars">★★★★★</span><br><small>American Astronautical Society, Virginia, AS · 2026</small></a>
+   <a class="card q" href="#/prestasi/3"><p><b>Global Finalist</b>, Fowler Global Social Innovation Challenge</p><span class="stars">★★★★★</span><br><small>University of San Diego, AS · 2026</small></a>
+   <div class="stat"><div><b>13</b><span>Penghargaan</span></div><div><b>5</b><span>Ajang internasional</span></div><div><b>3.85</b><span>IPK / 4.00</span></div></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="head"><h2>Keahlian Teknis</h2></div>
+  <div class="plans">
+   <a class="card plan" href="#/keahlian/teknis"><h4>Teknis</h4><p>CAD Design, CFD/FEA Simulation, Welding, CNC Machine, Composite Fabrication, 3D Printing, Laser Cutting, Lathe, Band Saw, Milling, Measuring Instrument.</p></a>
+   <a class="card plan" href="#/keahlian/software"><h4>Software</h4><p>Autodesk Inventor, Fusion 360, SolidWorks, MATLAB, C/C++, CorelDRAW, Ansys, ROS2, Proteus, KiCad, FluidSIM, VSCode.</p></a>
+   <a class="card plan" href="#/keahlian/bahasa"><h4>Bahasa &amp; Sertifikasi</h4><p>Indonesia (Native), English (Professional). UKBI 2024: Sangat Unggul. British Council 2024: 534 / TOEIC 945.</p></a>
+   <div class="side">Kepemimpinan, public speaking, manajemen proyek, dan kerja tim.</div>
+  </div>
+ </section>
+
+ <!-- SEKSI KONTAK DIRECT DENGAN TAUTAN LANGSUNG -->
+ <section id="kontak">
+  <div class="head"><h2>Hubungi Saya</h2></div>
+  <div class="contact-section-wrapper">
+   <div class="contact-cards-list">
+    <a href="mailto:rafidaazis47@gmail.com" class="contact-card-item" target="_blank" rel="noopener">
+     <div class="contact-icon-box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+     </div>
+     <div class="contact-card-info">
+      <small>Email</small>
+      <b>rafidaazis47@gmail.com</b>
+     </div>
+    </a>
+
+    <a href="https://wa.me/6285806708945" class="contact-card-item" target="_blank" rel="noopener">
+     <div class="contact-icon-box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+     </div>
+     <div class="contact-card-info">
+      <small>Telepon / WhatsApp</small>
+      <b>+62 858-0670-8945</b>
+     </div>
+    </a>
+
+    <a href="https://maps.google.com/?q=Surabaya,+Indonesia" class="contact-card-item" target="_blank" rel="noopener">
+     <div class="contact-icon-box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+     </div>
+     <div class="contact-card-info">
+      <small>Lokasi</small>
+      <b>Surabaya, Indonesia · Terbuka untuk Kolaborasi</b>
+     </div>
+    </a>
+   </div>
+
+   <div class="social-pills-grid">
+    <a href="https://github.com/rafidaazis" target="_blank" rel="noopener" class="social-pill-btn">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+     <span>GitHub</span>
+    </a>
+    <a href="https://instagram.com/rafidaazis" target="_blank" rel="noopener" class="social-pill-btn">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+     <span>Instagram</span>
+    </a>
+    <a href="https://linkedin.com/in/rafidaazis/" target="_blank" rel="noopener" class="social-pill-btn">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+     <span>LinkedIn</span>
+    </a>
+    <a href="https://wa.me/6285806708945" target="_blank" rel="noopener" class="social-pill-btn">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+     <span>WhatsApp</span>
+    </a>
+    <a href="mailto:rafidaazis47@gmail.com" target="_blank" rel="noopener" class="social-pill-btn">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+     <span>Email</span>
+    </a>
+   </div>
+  </div>
+ </section>
+</main>
+<main class="wrap" id="view" hidden></main>
+
+<footer>
+ <div class="fg">
+  <div>
+   <div class="logo"><i>R</i>Rafida.portfolio</div>
+   <p style="opacity:.75;margin-top:10px">Mahasiswa Teknik Mekatronika PENS · Team Leader Bamantara EEPISAT.</p>
+  </div>
+  <div>
+   <h5>Menu</h5>
+   <a href="#home">Beranda</a>
+   <a href="#proyek">Proyek</a>
+   <a href="#pengalaman">Pengalaman</a>
+  </div>
+  <div>
+   <h5>Lainnya</h5>
+   <a href="#alasan">Keahlian</a>
+   <a href="#prestasi">Prestasi</a>
+   <a href="#/kontak">Kontak</a>
+  </div>
+  <div>
+   <h5>Tautan Langsung</h5>
+   <div class="footer-social-pills">
+    <a href="mailto:rafidaazis47@gmail.com" target="_blank" rel="noopener" class="footer-pill-btn">✉ rafidaazis47@gmail.com</a>
+    <a href="https://wa.me/6285806708945" target="_blank" rel="noopener" class="footer-pill-btn">☎ +62 858-0670-8945</a>
+    <a href="https://linkedin.com/in/rafidaazis/" target="_blank" rel="noopener" class="footer-pill-btn">in linkedin.com/in/rafidaazis</a>
+    <a href="https://github.com/rafidaazis" target="_blank" rel="noopener" class="footer-pill-btn">⌥ github.com/rafidaazis</a>
+   </div>
+  </div>
+ </div>
+ <div class="copy">© 2026 Rafida Azis Al Habib. Hak cipta dilindungi.</div>
+</footer>
+
+<script>
+const EMAIL='rafidaazis47@gmail.com';
+const PHONE='+62 858-0670-8945';
+
+/* Logika 3D Gyroscope / Tilt Kursor */
+const pCard = document.getElementById('profileCard');
+const pWrapper = document.getElementById('profileCardWrapper');
+
+if(pCard && pWrapper) {
+  let rect = pWrapper.getBoundingClientRect();
+  
+  window.addEventListener('resize', () => { rect = pWrapper.getBoundingClientRect(); });
+  window.addEventListener('scroll', () => { rect = pWrapper.getBoundingClientRect(); });
+
+  pWrapper.addEventListener('mousemove', (e) => {
+    rect = pWrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -18;
+    const rotateY = ((x - centerX) / centerX) * 18;
+    
+    pCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    pCard.style.boxShadow = `${-rotateY * 1.5}px ${rotateX * 1.5 + 25}px 45px rgba(5, 25, 90, 0.4)`;
+  });
+
+  pWrapper.addEventListener('mouseleave', () => {
+    pCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    pCard.style.boxShadow = '0 24px 60px rgba(5, 25, 90, 0.35)';
+  });
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', (e) => {
+      if (e.gamma !== null && e.beta !== null && window.innerWidth <= 900) {
+        const tiltX = Math.min(Math.max(e.beta - 45, -20), 20) * -0.5;
+        const tiltY = Math.min(Math.max(e.gamma, -20), 20) * 0.5;
+        pCard.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      }
+    });
+  }
+}
+
+/* Proyek Data */
+const P=[
+['ANBANTARA Medium Altitude High Powered Rocket','g1','Aerospace','Team Leader, Bamantara EEPISAT','Sep 2026',[
+ 'Merancang dan membangun airframe roket fiberglass semi-monocoque setinggi 320 cm dengan diameter 120 mm (nose cone parabolik, body tube, coupler, avionics bay), empat fin fiberglass 3 mm, dan motor AeroTech M1850W (7.649 N·s) pada dudukan baja.',
+ 'Merekayasa recovery dual deployment tanpa pirotek memakai dua sambungan cold-gas CO₂ dengan nylon shear pin dan tiga parasut (drogue Ø180 cm, main Ø346 cm, payload Ø278 cm).',
+ 'Mengembangkan payload UAV glider yang terlipat sesuai diameter dalam kontainer, dengan sayap pivot tunggal berkunci pegas torsi serta kendali roll/pitch lewat dua flaperon dan V-tail NACA 0009 (dihedral 35°).'],
+ 'Fiberglass · AeroTech M1850W · CO₂ dual deployment','Laju turun 9,06 m/s (drogue) dan 5,67 m/s (main); Best Rocket TEKNOFEST 2026'],
+['123 Block, Round Material Clamp, & Vise Parallel Clamp','g2','Manufaktur','Desainer CAD/CAM & operator CNC','Jul 2026',[
+ 'Mendesain dan memvalidasi model 3D komponen perkakas presisi dengan prinsip Design for Manufacture, mencakup pemilihan material (aluminium dan blok logam) serta BOM.',
+ 'Menyusun strategi permesinan dan toolpath di perangkat lunak CAM, lalu mengoperasikan mesin CNC untuk milling, drilling, dan fitur geometris presisi dengan parameter pemotongan dan aliran coolant terintegrasi.',
+ 'Mengelola dokumen produksi (Work Permit, Part Status, Job List) dan melakukan inspeksi dimensi dengan alat ukur presisi untuk memperbaiki toleransi geometris pada produksi berikutnya.'],
+ 'CAD · CAM · CNC milling · DFM','Toleransi geometris diperbaiki melalui inspeksi dimensi'],
+['Can Satellite (CanSat) Paraglider Instrument Delivery','g3','CanSat','Validasi teknis & desain mekanik','Jun 2026',[
+ 'Memimpin validasi teknis lewat simulasi CFD, uji jatuh parasut, uji fungsi mekanisme pemisah berbasis lengan servo, dan kalibrasi sensor terintegrasi demi nol kegagalan saat peluncuran dan pemulihan.',
+ 'Mengintegrasikan kontrol penurunan aktif dengan paraglider dan aktuasi servo, serta mekanisme pelepasan telur terkontrol pada ketinggian target.',
+ 'Merancang arsitektur mekanik 3D modular dengan pendekatan Design for Manufacture and Assembly, memakai komposit balsa, struktur ABS cetak 3D, dan batang karbon.'],
+ 'Paraglider · Servo · CFD · Balsa/ABS/karbon','Laju turun terjaga 10–20 m/s (container) dan 5–10 m/s (payload)'],
+['Palm Oil Harvesting Tool Using Self-Charging Solar Panel System','g4','Energi','Perancang sistem daya & rangka','Mei 2026',[
+ 'Merancang sistem daya mandiri dengan panel surya kompak dan modul manajemen baterai (BMS/Solar Charge Controller), mengoptimalkan regulasi tegangan serta proteksi overcharge/overdischarge.',
+ 'Mendesain rumah panel dan baterai pada rangka alat berbasis CAD, dengan memperhitungkan titik distribusi massa, sudut kemiringan panel, ketahanan getaran, dan paparan luar ruang (IP rating).',
+ 'Melakukan analisis konsumsi daya dan uji lapangan laju pengisian pada berbagai intensitas cahaya untuk memverifikasi efisiensi penyimpanan energi.'],
+ 'Panel surya · BMS / Solar Charge Controller · CAD','Sistem mampu mendukung siklus operasi alat tanpa daya eksternal'],
+['Palm Oil Harvesting Tool Using Self-Charging Piezoelectric System','g5','Energi','Perancang sistem energi & mekanik','Nov 2025',[
+ 'Merancang arsitektur self-charging dengan komponen piezoelektrik yang mengubah getaran proses pemotongan pelepah dan buah sawit menjadi energi listrik, dilengkapi rectifier dan power management IC.',
+ 'Mengembangkan mekanisme pemotong terintegrasi transduser piezoelektrik pada titik tegangan mekanis tinggi, dengan mempertimbangkan frekuensi resonansi dan amplitudo getaran tanpa mengorbankan integritas struktur.',
+ 'Menguji daya, tegangan, dan arus keluaran pada berbagai frekuensi getaran serta keandalan supplies daya ke sensor dan komponen elektronik pendukung.'],
+ 'Piezoelektrik · Rectifier · Power management IC','Karakterisasi daya, tegangan, dan arus pada berbagai frekuensi getaran'],
+['Can Satellite (CanSat) Auto-gyro Descender','g6','CanSat','Mechanical Engineer','Jun 2025',[
+ 'Merancang sistem kontrol penurunan auto-gyro dengan airfoil NACA 6412, angle of attack −10°, dan diameter rotor 571,2 mm yang menstabilkan laju turun payload dari apogee.',
+ 'Mengembangkan mekanisme pelepas payload berbasis rack and pinion dan pegas tekan, serta mengoptimalkan rangka komposit balsa dan bilah foam/batang karbon agar massa total tetap 1403 g dan lolos uji shock dan vibrasi.',
+ 'Menerapkan mekanisme bilah terbuka pasif dengan pegas torsi 90° dan mengatur distribusi massa di dasar payload agar tidak berayun dan tetap berorientasi nadir.'],
+ 'NACA 6412 · AoA −10° · Rotor Ø571,2 mm','Laju turun stabil 5,39 m/s dari apogee']];
+
+/* Pengalaman Data */
+const E=[
+['Team Leader & Mechanical Engineer','g1','2024–Kini','Bamantara EEPISAT, Surabaya',[
+ 'Team Leader: memimpin tim multidisiplin 22 orang menjalankan misi aerospace dari perencanaan hingga operasi penerbangan.',
+ 'Pengujian profesional bersama BRIN Satellite Technology Center.',
+ 'Menginisiasi program sosial EEPISAT Goes To School (EGTS) untuk berbagi pengetahuan dirgantara ke sekolah lokal.',
+ '3rd Rank World Champion di CanSat Competition 2026 (Virginia, AS), diikuti lebih dari 18 negara.',
+ 'Best Rocket di TEKNOFEST 2026 (A4 International Rocket, Aksaray, Türkiye) bersama ANBANTARA, dinilai di antara tim dari 6 negara.',
+ 'Mechanical Engineer: membuat desain CAD dari nol, analisis CFD/FEA, serta perakitan dengan 3D printing, laser cutting, dan komposit.',
+ 'Peringkat 1 pada fase Preliminary Design Review (PDR) CanSat Competition 2025 di antara 18 negara.',
+ 'Human Development: menyusun kerangka evaluasi kinerja dan pemantauan anggota, program pelatihan internal, serta kegiatan team building.']],
+['Co-Founder','g3','2025–Kini','PE-NOVTRA (Palm Energy & Inovasi Nusantara), Surabaya',[
+ 'Mendirikan startup hardware yang membangun alat pertanian hemat energi untuk menekan biaya operasional dan ketergantungan bahan bakar fosil di perkebunan.',
+ 'Mengelola alokasi keuangan, memimpin eksekusi proyek end-to-end, dan mengoordinasikan pengawasan tim.',
+ 'Top 3 Pertamuda Seed and Scale 2025, kategori Energy Founder (Pertamina), dengan bimbingan, mentoring, dan dukungan penuh.',
+ 'Global Finalist Fowler Global Social Innovation Challenge (University of San Diego), satu dari 43 tim finalis dari 15 negara, untuk pemanen sawit surya modular bagi petani kecil.']],
+['Student Exchange, Electrical Engineering','g4','Sep 2025','Institute of Technical Education (ITE) College West, Singapura',[
+ 'Terpilih sebagai 1 dari 20 delegasi mahasiswa PENS untuk pertukaran bilateral Temasek Foundation TF-SCALE 2025.',
+ 'Menyelesaikan program kepemimpinan dan pertukaran budaya Singapura–Indonesia dengan fokus kolaborasi lintas budaya dan aksi komunitas.']],
+['Bachelor of Mechatronics Engineering','g5','2024–2028 (target)','Politeknik Elektronika Negeri Surabaya (PENS)',[
+ 'IPK 3.85/4.00.',
+ 'Mata kuliah relevan: Automatic Control, Robotics, Microcontroller & Systems Interface, Industrial Automation, Mechanical Design, Kinematics, Analog & Digital Electronics, Signals and Systems, Advanced Programming, CNC Machine.',
+ 'Membangun fondasi desain mekanik, elektronika, sistem kendali, dan pemrograman untuk aplikasi mekatronika dan robotika.']],
+['Vice Chair Pradana Putra','g1','2022–2023','Pramuka Ambalan Brawijaya, Trenggalek',[
+ 'Merencanaan dan melaksanakan lomba pramuka tingkat regional untuk Dewan Kerja Penegak dengan peserta dari sekolah se-Karesidenan Kediri.',
+ 'Mengoordinasikan tim kepemimpinan siswa serta mengelola jadwal dan sumber daya acara komunitas pramuka berskala besar.',
+ 'Memfasilitasi komunikasi anggota dan pembina untuk menyelaraskan prioritas dan mengatasi hambatan operasional.']],
+['Olympiad Staff','g3','2022–2023','Tim Olimpiade Sains, Trenggalek',[
+ 'Merancang, mengembangkan, dan memverifikasi modul soal Olimpiade Sains (level HOTS) lengkap dengan rubrik penilaian dan kunci jawaban sesuai standar kurikulum kompetisi nasional.',
+ 'Mengoordinasikan pembentukan dan operasional tim, sesi pembinaan, pendaftaran, distribusi materi, dan logistik teknis.',
+ 'Menganalisis data kinerja peserta (analisis butir soal: tingkat kesukaran dan daya beda) dan menyusun laporan evaluasi tim.']]];
+
+/* Prestasi Data */
+const A=[
+['Best Rocket, TEKNOFEST A4 International Rocket Category','ROKETSAN, Aksaray, Türkiye','2026','Meraih gelar Best Rocket pada ajang roket internasional bergengsi TEKNOFEST di Aksaray, Türkiye bersama tim Bamantara EEPISAT.'],
+['3rd World Champion, CanSat Competition','American Astronautical Society (AAS), Virginia, AS','2026','Meraih Juara 3 Dunia dalam kompetisi perancangan satelit kaleng berstandar internasional yang diselenggarakan AAS di Virginia, AS.'],
+['Global Finalist, Fowler Global Social Innovation Challenge (FGSIC)','University of San Diego, AS','2026','Terpilih sebagai finalis global dari 43 tim dari 15 negara dengan inovasi alat pemanen sawit bertenaga energi terbarukan.'],
+['Top 3 Pertamuda Seed and Scale, Energy Founder Category','PT Pertamina Persero','2025','Memperoleh penghargaan Top 3 Founder Energi pada kompetisi inkubasi bisnis Pertamuda.'],
+['Best Paper, IES-ETA Electronics Systems and Electrics Technology','IEEE IES','2025','Menerima penghargaan Best Paper atas publikasi analisis deformasi termal material CanSat.'],
+['Global Finalist, TEKNOFEST Model Satellite Category','TURKSAT, Aksaray, Türkiye','2025','Menjadi finalis global kategori Model Satellite di Türkiye.'],
+['Global Finalist, CanSat Competition','American Astronautical Society (AAS), Virginia, AS','2025','Lolos sebagai finalis global CanSat Competition 2025.'],
+['1st Place, Olimpiade MIPA Indonesia (OMI) Biologi','OMI','2024','Juara 1 Bidang Biologi.'],
+['Gold Medalist, Sejarah','Olimpiade Update Festival IX','2024','Medali Emas Bidang Sejarah.'],
+['Gold Medalist, Sosiologi','Olimpiade Update Festival VIII','2023','Medali Emas Bidang Sosiologi.'],
+['Silver Medalist, Ilmu Kebumian','Olimpiade Update Festival VIII','2023','Medali Perak Bidang Kebumian.'],
+['Silver Medalist, Sejarah','Olimpiade Update Festival VIII','2023','Medali Perak Bidang Sejarah.'],
+['Gold Medalist, Matematika','National Olympiad of Outstanding Students (NOOS)','2023','Medali Emas Bidang Matematika.']];
+
+const SK={'teknis':['CAD Design','CFD/FEA Simulation','Welding','CNC Machine','Composite Fabrication','3D Printing','Laser Cutting','Lathe','Band Saw','Milling','Measuring Instrument'],
+'software':['Autodesk Inventor','Fusion 360','SolidWorks','MATLAB','C/C++','CorelDRAW','Ansys','ROS2','Proteus','KiCad','FluidSIM','VSCode'],
+'bahasa':['Indonesia (Native)','English (Professional)','UKBI 2024: Sangat Unggul','British Council EnglishScore 2024: 534 (TOEIC 945)']};
+
+const PROFIL='Mahasiswa Teknik Mekatronika dengan prestasi akademik menonjol (IPK 3.85/4.00), keahlian praktis di bidang robotika, dan minat besar pada teknik dirgantara. Mampu mengoordinasikan proyek serta berkolaborasi dalam tim multidisiplin.';
+
+const $=s=>document.querySelector(s),V=$('#view'),H=$('#homeMain');
+const mail=(s,b)=>location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+const card=(h,c,g,t,p)=>`<a class="card" href="${h}"><div class="img ${c}"><span class="off">${g}</span></div><div class="b"><h4>${t}</h4><p>${p}</p><div class="f"><span>Lihat detail</span><span>›</span></div></div></a>`;
+const pn=(A,i,b)=>`<div class="pn">${i>0?`<a class="btn line" href="#/${b}/${i}">‹ ${A[i-1][0]}</a>`:'<span></span>'}${i<A.length-1?`<a class="btn blue" href="#/${b}/${i+2}">${A[i+1][0]} ›</a>`:'<span></span>'}</div>`;
+const page=(back,lbl,body)=>`<div class="page"><a class="back" href="${back}">‹ ${lbl}</a>${body}</div>`;
+const H1=t=>`<h1 style="color:var(--ink);font-size:2rem">${t}</h1>`;
+const lst=(t,d,items)=>`${H1(t)}<p style="color:var(--mut)">${d}</p><div class="lst">${items}</div>`;
+const ul=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+const det=(c,t,chips,secs,side,nav)=>`<div class="dh ${c}"><h1>${t}</h1></div><div class="chips">${chips.map(x=>`<span class="chip">${x}</span>`).join('')}</div><div class="cols"><div>${secs.map(x=>`<h3>${x[0]}</h3>${x[1]}`).join('')}</div><aside class="box">${side}<a class="btn blue" href="#/kontak">Diskusikan proyek serupa</a></aside></div>${nav}`;
+
+function render(p,a){
+ const i=(+a||0)-1;
+ if(p==='proyek'){ 
+  if(a&&P[i]){const x=P[i];return page('#/proyek','Semua proyek',det(x[1],x[0],[x[2],'Peran: '+x[3],x[4]],[['Yang saya kerjakan',ul(x[5])]],'<b>Teknologi</b><small>'+x[6]+'</small><b>Hasil utama</b><small>'+x[7]+'</small>',pn(P,i,'proyek')))}
+  return page('#home','Beranda',lst('Semua Proyek','Pilih proyek untuk melihat detailnya.',P.map((x,j)=>card('#/proyek/'+(j+1),x[1],x[4],x[0],x[2])).join('')))}
+ 
+ if(p==='pengalaman'){ 
+  if(a&&E[i]){const x=E[i];return page('#/pengalaman','Semua pengalaman',det(x[1],x[0],[x[3],x[2]],[['Tanggung jawab & pencapaian',ul(x[4])]],'<b>Periode</b><small>'+x[2]+'</small><b>Tempat</b><small>'+x[3]+'</small>',pn(E,i,'pengalaman')))}
+  return page('#home','Beranda',lst('Pengalaman & Pendidikan','Perjalanan kerja dan belajar saya.',E.map((x,j)=>card('#/pengalaman/'+(j+1),x[1],x[2],x[0],x[3])).join('')))}
+ 
+ if(p==='prestasi'){
+  if(a&&A[i]){const x=A[i];return page('#/prestasi','Semua prestasi',det('g1',x[0],[x[1],x[2]],[['Detail Prestasi',`<p>${x[3]||'Prestasi diraih dalam ajang kompetisi nasional/internasional.'}</p>`]],'<b>Penyelenggara</b><small>'+x[1]+'</small><b>Tahun</b><small>'+x[2]+'</small>',pn(A,i,'prestasi')))}
+  return page('#home','Beranda',`${H1('Prestasi')}<div class="lst">${A.map((x,j)=>`<a class="card q" href="#/prestasi/${j+1}"><p><b>${x[0]}</b></p><span class="stars">★★★★★</span><br><small>${x[1]} · ${x[2]}</small></a>`).join('')}</div><div class="pn"><a class="btn blue" href="#/kontak">Ajak saya bekerja sama</a></div>`)}
+ 
+ if(p==='keahlian'){
+  const kKey=(a||'').toLowerCase();
+  if(SK[kKey]){
+   const titles={'teknis':'Keahlian Teknis & Fabrikasi','software':'Software & Pemrograman','bahasa':'Bahasa & Sertifikasi'};
+   return page('#home','Beranda',det('g2',titles[kKey]||'Keahlian',[kKey.toUpperCase()],[['Daftar Keahlian',ul(SK[kKey])]],'<b>Kategori</b><small>'+kKey+'</small>','<div class="pn"><a class="btn blue" href="#/kontak">Hubungi Saya</a></div>'));
+  }
+ }
+
+ if(p==='tentang') return page('#home','Beranda',`${H1('Tentang Rafida')}<div class="cols"><div><h3>Profil</h3><p>${PROFIL}</p>${Object.entries(SK).map(([k,v])=>`<h3>Keahlian ${k.toUpperCase()}</h3><div class="chips">${v.map(x=>`<span class="chip">${x}</span>`).join('')}</div>`).join('')}</div><aside class="box"><b>Rafida Azis Al Habib</b><small>Surabaya, Indonesia</small><a class="btn blue" href="#/cv">Lihat CV</a><a class="btn line" href="#/proyek">Lihat proyek</a></aside></div>`);
+ if(p==='cv') return page('#home','Beranda',`${H1('Curriculum Vitae')}<p style="color:var(--mut)">Rafida Azis Al Habib · ${EMAIL} · ${PHONE}<br>linkedin.com/in/rafidaazis · github.com/rafidaazis</p><div class="cols"><div><h3>Ringkasan</h3><p>${PROFIL}</p><h3>Pendidikan</h3><p><b style="color:var(--ink)">Politeknik Elektronika Negeri Surabaya (PENS)</b>, Bachelor of Mechatronics Engineering, IPK 3.85/4.00 (Agu 2024 – Okt 2028, target)</p><p><b style="color:var(--ink)">ITE College West, Singapura</b>, Student Exchange of Electrical Engineering (Sep 2025)</p><p><b style="color:var(--ink)">SMA Negeri 1 Trenggalek</b>, IPA/MIPA, nilai 91.15/100 (2021–2024)</p><h3>Pengalaman</h3>${E.map(x=>`<p><b style="color:var(--ink)">${x[0]}</b>, ${x[3]} (${x[2]})</p>`).join('')}<h3>Proyek</h3>${P.map(x=>`<p><b style="color:var(--ink)">${x[0]}</b> (${x[4]})</p>`).join('')}<h3>Publikasi</h3><p>Thermal Deformation Analysis of CanSat Frame Materials Under High-Temperature Environment Conditions, IEEE IES (International Electronic Symposium), Agu 2025. DOI: 10.1109/IES67184.2025.11161459</p><h3>Sertifikasi</h3>${ul(['UKBI (2024): Sangat Unggul','British Council English Score Certificate (2024): 534 / TOEIC 945'])}<h3>Bahasa</h3><p>Indonesia (Native), English (Professional)</p></div><aside class="box"><button class="btn blue" onclick="print()">Cetak / Simpan PDF</button><a class="btn line" href="#/prestasi">Lihat prestasi</a><a class="btn line" href="#/kontak">Hubungi saya</a></aside></div>`);
+ 
+ if(p==='kontak') return page('#home','Beranda',`${H1('Hubungi Saya')}<p style="color:var(--mut);margin-bottom:24px">Klik tombol atau kartu di bawah untuk langsung terhubung melalui Email, WhatsApp, atau media sosial.</p>
+ <div class="contact-cards-list">
+  <a href="mailto:rafidaazis47@gmail.com" class="contact-card-item" target="_blank" rel="noopener">
+   <div class="contact-icon-box">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+   </div>
+   <div class="contact-card-info"><small>Email</small><b>rafidaazis47@gmail.com</b></div>
+  </a>
+  <a href="https://wa.me/6285806708945" class="contact-card-item" target="_blank" rel="noopener">
+   <div class="contact-icon-box">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+   </div>
+   <div class="contact-card-info"><small>Telepon / WhatsApp</small><b>+62 858-0670-8945</b></div>
+  </a>
+  <a href="https://maps.google.com/?q=Surabaya,+Indonesia" class="contact-card-item" target="_blank" rel="noopener">
+   <div class="contact-icon-box">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+   </div>
+   <div class="contact-card-info"><small>Lokasi</small><b>Surabaya, Indonesia · Terbuka untuk Kolaborasi</b></div>
+  </a>
+ </div>
+ <div class="social-pills-grid" style="margin-top:20px">
+  <a href="https://github.com/rafidaazis" target="_blank" rel="noopener" class="social-pill-btn"><span>GitHub</span></a>
+  <a href="https://instagram.com/rafidaazis" target="_blank" rel="noopener" class="social-pill-btn"><span>Instagram</span></a>
+  <a href="https://linkedin.com/in/rafidaazis/" target="_blank" rel="noopener" class="social-pill-btn"><span>LinkedIn</span></a>
+  <a href="https://wa.me/6285806708945" target="_blank" rel="noopener" class="social-pill-btn"><span>WhatsApp</span></a>
+  <a href="mailto:rafidaazis47@gmail.com" target="_blank" rel="noopener" class="social-pill-btn"><span>Email</span></a>
+ </div>`);
+ 
+ return page('#home','Beranda','<h1>Halaman tidak ditemukan</h1>');
+}
+
+const K={proyek:'#proyek',pengalaman:'#pengalaman',prestasi:'#prestasi',kontak:'#/kontak'};
+function route(){
+ const h=location.hash||'#home',m=h.match(/^#\/([^/]+)\/?(.*)$/);
+ document.body.classList.toggle('sub',!!m);H.hidden=!!m;V.hidden=!m;
+ if(m){V.innerHTML=render(m[1],m[2]);scrollTo(0,0)}
+ else{const el=document.getElementById(h.slice(1));requestAnimationFrame(()=>el&&h!=='#home'?el.scrollIntoView():scrollTo(0,0))}
+ const key=m?(K[m[1]]||''):h;
+ document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')===key));
+}
+addEventListener('hashchange',route);route();
+document.addEventListener('click',e=>{const b=e.target.closest('.menu');
+ if(b)b.setAttribute('aria-expanded',$('.links').classList.toggle('open'));else if(e.target.closest('.links a'))$('.links').classList.remove('open')});
+</script>
+</body>
+</html>
